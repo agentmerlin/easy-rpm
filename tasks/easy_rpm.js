@@ -25,7 +25,6 @@ function writeSpecFile(grunt, files, options) {
     b.push("Release: "+options.release);
     b.push("Group: "+options.group);
     b.push("Summary: "+options.summary);
-    b.push("Group: "+options.group);
     b.push("License: "+options.license);
     b.push("BuildArch: "+options.buildArch);
     if (typeof options.autoReqProv !== "undefined") {
