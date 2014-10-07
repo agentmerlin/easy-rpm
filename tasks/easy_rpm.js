@@ -80,7 +80,9 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask("easy_rpm", "Easily create RPM package to install files/directories", function() {
 
-    var options = this.options({
+      var done = this.async();
+
+      var options = this.options({
       name: "noname",
       summary: "No Summary",
       description: "No Description",
@@ -256,6 +258,8 @@ module.exports = function(grunt) {
         grunt.log.error(result);
         grunt.warn("Failed while building RPM", code);
       }
+
+        done();
     });
   });
 };
