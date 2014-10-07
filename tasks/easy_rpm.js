@@ -215,7 +215,7 @@ module.exports = function(grunt) {
 
     grunt.util.spawn({
       cmd: buildCmd,
-      args: buildArgs,
+      args: buildArgs
     }, function(error, result, code) {
       if (!error) {
         //Copy the build output to the current directory
@@ -256,8 +256,6 @@ module.exports = function(grunt) {
         grunt.log.error(result);
         grunt.warn("Failed while building RPM", code);
       }
-
-      done();
     });
   });
 };
